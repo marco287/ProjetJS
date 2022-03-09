@@ -20,9 +20,9 @@ function App() {
     createPokemonObject(data.results)
     await console.log(allPokemons)
   }
-  useEffect(()=>{
-    getAllPokemons()
-  },[])
+  // useEffect(()=>{
+  //   getAllPokemons()
+  // },[])
 
   return (
     <div className="app-container">
