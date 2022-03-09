@@ -4,7 +4,7 @@ import PokemonThumbnail from "./Components/PokemonThumbnail";
 
 function App() {
   const [allPokemons,setAllPokemons] = useState([]);
-  const [loadPoke,setLoadPoke] = useState('https://pokeapi.co/api/v2/pokemon?limit=20');
+  const [loadPoke,setLoadPoke] = useState('https://pokeapi.co/api/v2/pokemon?limit=5');
   const getAllPokemons = async () =>{
     const res = await fetch(loadPoke)
     const data = await res.json()
@@ -18,7 +18,7 @@ function App() {
       });
     }
     createPokemonObject(data.results)
-    await console.log(allPokemons)
+     console.log(allPokemons)
   }
   // useEffect(()=>{
   //   getAllPokemons()
@@ -26,7 +26,7 @@ function App() {
 
   return (
     <div className="app-container">
-     <h1>Pokemon Kingdom .</h1>
+     <h1>Welcome!</h1>
     
      <div className="pokemon-container">
        <div className="all-container">
@@ -55,7 +55,7 @@ function App() {
                  />
             )}
        </div>
-       <button className="load-more" onClick={()=>getAllPokemons()}>More Pokemons</button>
+       <button className="load-more" onClick={()=>getAllPokemons()}>See more Pokemons</button>
      </div>
     </div>
   );
